@@ -1,0 +1,116 @@
+.main-container {
+  gap: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(248, 241, 233);
+}
+
+.image-block {
+  margin-top: 7rem;
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background-color: rgb(248, 241, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-inner {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 4s ease;
+  opacity: 1;
+  z-index: 1;
+}
+
+.image-block:hover .image-inner {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.image-block:not(:hover) .image-inner {
+  opacity: 0;
+}
+
+.image-text {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  font-family: 'Georgia', serif;
+  color: #1d90ca9a;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  height: 144px; 
+  position: relative;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.button {
+  position: absolute; 
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 36px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, color 0.5s ease, padding 0.5s ease;
+  width: 180px;
+  height: 48px;
+  pointer-events: auto;
+  color: initial;
+  overflow: hidden;
+}
+
+.button span {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.button::after {
+  content: ">";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+  color: white;
+  pointer-events: none;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button:hover {
+  width: 144px;      
+  height: 144px;     
+  border-radius: 50%;
+  background-color: rgb(5, 75, 98);
+  padding: 0;
+  color: transparent; 
+}
+
+.button:hover span {
+  opacity: 0;
+}
+
+.button:hover::after {
+  opacity: 1;
+}

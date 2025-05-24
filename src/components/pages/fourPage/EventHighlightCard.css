@@ -1,0 +1,236 @@
+.scroll-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  
+  overflow: hidden;
+}
+
+
+.scroll-bg-text {
+  position: absolute;
+  white-space: nowrap;
+  width: 100%;
+  top: 40%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scroll-bg-text h1 {
+  font-size: 8vw;
+  opacity: 0.2;
+  color: #000;
+  animation: scrollText 20s linear infinite;
+  font-family: serif;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Card container section with background image */
+.card-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scrollable vertical container */
+.card-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40rem; 
+  padding-right: 8px;
+  scrollbar-width: none;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Each event card */
+.event-card {
+  scroll-snap-align: start;
+  height: 65vh;
+  width: calc(450px - 96px); 
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.inner-border {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.inner-border h2 {
+  font-size: 1.8rem;
+  font-family: serif;
+  margin-bottom: 1rem;
+}
+
+.inner-border p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+
+
+/* Button with hover effect */
+.more-button {
+  background: transparent;
+  border: 1px solid #5f6263;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 2s ease;
+  overflow: hidden;
+  border-radius: 50px;
+  color: #5a5858;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-button .default {
+  transition: opacity 0.4s ease;
+}
+
+.more-button .hover {
+  display: none;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+/* Hover state */
+.more-button:hover {
+  background-color: #0a5671; 
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.more-button:hover .default {
+  display: none;
+}
+
+.more-button:hover .hover {
+  display: inline;
+  transform: scale(1.2);
+}
+
+
+
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+  .event-card {
+    width: 80%;
+    height: 60vh;
+  }
+
+  .inner-border h2 {
+    font-size: 1.5rem;
+  }
+
+  .inner-border p {
+    font-size: 0.95rem;
+  }
+
+  .scroll-bg-text h1 {
+    font-size: 6vw;
+  }
+
+  .card-container {
+    gap: 30rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .event-card {
+    width: 90%;
+    height: 55vh;
+    padding: 1.5rem;
+  }
+
+  .inner-border {
+    padding: 1rem;
+  }
+
+  .inner-border h2 {
+    font-size: 1.4rem;
+  }
+
+  .inner-border p {
+    font-size: 0.9rem;
+  }
+
+  .scroll-bg-text h1 {
+    font-size: 5.5vw;
+  }
+
+  .card-container {
+    gap: 25rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .event-card {
+    width: 95%;
+    height: 50vh;
+    padding: 1rem;
+  }
+
+  .inner-border h2 {
+    font-size: 1.3rem;
+  }
+
+  .inner-border p {
+    font-size: 0.85rem;
+  }
+
+  .scroll-bg-text h1 {
+    font-size: 6vw;
+  }
+
+  .card-container {
+    gap: 20rem;
+  }
+}

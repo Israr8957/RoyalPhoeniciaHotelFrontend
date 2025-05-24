@@ -1,0 +1,143 @@
+.pool-container {
+  height: 100vh;
+  background-color: rgb(248, 241, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-wrapper {
+  position: relative;
+  width: 80%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.bg-pool, .bg-room {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  opacity: 1; 
+}
+
+
+.bg-pool {
+  background-image: url('/public/images/room.jpg');
+  z-index: 0;
+  animation: poolZoomIn 16s linear infinite;
+}
+
+
+.bg-room {
+  background-image: url('/public/images/pool.jpg');
+  z-index: 1;
+  animation: roomSlideZoomOut 16s linear infinite;
+}
+
+
+@keyframes poolZoomIn {
+  0%, 49.99% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes roomSlideZoomOut {
+  0% {
+    transform: translateX(100%) scale(1.2);
+  }
+  20% {
+    transform: translateX(0%) scale(1.2); 
+  }
+  32% {
+    transform: translateX(0%) scale(1); 
+  }
+  50% {
+    transform: translateX(-100%) scale(1); 
+  }
+  100% {
+    transform: translateX(-100%) scale(1); 
+  }
+}
+
+
+.pool-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+
+.card-wrapper {
+  position: relative;
+  padding: 18px;
+  display: inline-block;
+}
+
+.card-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(146, 143, 143);
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.card {
+  background-color: white;
+  padding: 60px;
+  width: 24vw;
+  box-shadow: 0 0 15px rgba(214, 205, 205, 0.2);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  border-radius: 0;
+}
+
+/* Inner Border */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid rgb(133, 127, 127);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}

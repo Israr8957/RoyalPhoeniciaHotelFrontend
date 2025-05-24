@@ -1,0 +1,157 @@
+
+
+.fivepage-wrapper {
+  background-color: #f9f4ec;
+  padding: 60px 40px;
+  font-family: 'Georgia', serif;
+}
+
+.fivepage-heading {
+  font-size: 48px;
+  text-align: center;
+  color: #2b2b2b;
+  margin-bottom: 50px;
+  letter-spacing: 1.5px;
+}
+
+.fivepage-slider {
+  margin-bottom: 3.5rem;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.fivepage-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.fivepage-card {
+  flex: 0 0 500px; 
+  height: 400px;  
+  scroll-snap-align: start;
+  position: relative;
+  border: 1px solid #f1f0f0;
+  overflow: hidden;
+}
+
+.fivepage-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.fivepage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s ease;
+}
+
+.fivepage-card:hover .fivepage-img {
+  transform: scale(1.2);
+}
+
+
+.fivepage-overlay {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  width: auto;
+  color: #fff;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fivepage-season {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+.fivepage-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  pointer-events: auto;
+}
+
+.fivepage-desc {
+  font-size: 13px;
+  margin: 0;
+  pointer-events: auto;
+}
+
+/* Buttons */
+.fivepage-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  pointer-events: auto;
+}
+
+.fivepage-more-btn {
+  padding: 6px 18px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+
+.fivepage-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+
+.fivepage-icon-btn i {
+  color: white;
+  font-size: 14px;
+}
+
+.fivepage-more-btn:hover,
+.fivepage-icon-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.fivepage-icon-btn:hover i {
+  color: #000;
+}
+
+.custom-hr {
+  height: 2px;
+  background-color: #ccc;
+  
+  margin: 40px auto 20px auto; 
+  width: calc(100% - 2in);     
+}
+
+@media (max-width: 768px) {
+  .custom-hr {
+    width: calc(100% - 1in);
+  }
+}
+

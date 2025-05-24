@@ -1,0 +1,145 @@
+.main {
+ 
+  padding: 60px 20px 40px;
+  text-align: center;
+
+  font-family: 'Georgia', serif;
+  color: #6e6e6e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+ 
+ 
+}
+
+
+/* logo */
+.logo-outer-box {
+  border: 1px solid #d6d6d6;
+  padding: 4px;
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 50px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-inner-box { 
+  border: 1px solid #838080d5;
+  width: 35px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #333;
+}
+
+
+.icon {
+  margin-top: 30px;
+  border: 1.5px solid #ccc;
+  padding: 10px 20px;
+  font-size: 22px;
+  
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.container {
+  margin-top: 4rem;  
+  max-width: 900px;
+  line-height: 1.1;
+  font-size: 2rem;
+  font-weight: 550;
+}
+.opt{
+  opacity: 0.5;
+}
+
+.button {
+  margin-top: 4rem;
+  padding: 12px 36px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+   margin-bottom: 2rem;
+}
+
+/* button hover effect */
+
+.more-button {
+  height: 50x;
+  width: 100px;
+  background: transparent;
+  border: 1px solid #adb2b5b6;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 2s ease; 
+  overflow: hidden;
+  border-radius: 50px;
+  color: #5a5858;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-button .default {
+  transition: opacity 0.4s ease;
+}
+
+.more-button .hover {
+  display: none;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+
+.more-button:hover {
+  background-color: #0a5671;
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.more-button:hover .default {
+  display: none;
+}
+
+.more-button:hover .hover {
+  display: inline;
+  transform: scale(1.2);
+}
+
+
+
+
+.button:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .button {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+}
+
+
