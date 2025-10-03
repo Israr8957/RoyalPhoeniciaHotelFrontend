@@ -12,5 +12,5 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Deployment Link 
-Open [https://royalphoeniciahotelfrontend.onrender.com/]([https://royalphoeniciahotelfrontend.onrender.com/](https://royalphoeniciahotelfrontend.onrender.com/) to view it in your browser.
+Open [https://royalphoeniciahotelfrontend.onrender.com/](https://royalphoeniciahotelfrontend.onrender.com/) to view it in your browser.
 
